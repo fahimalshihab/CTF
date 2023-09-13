@@ -1,1 +1,1 @@
-# PicoCTF
+# Capture The Flag
