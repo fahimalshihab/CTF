@@ -1,3 +1,16 @@
+# 1)The_Archive
+ └─$ fcrackzip -v -D -u -p rockyou.txt archive.zip  
+
+ PASSWORD FOUND!!!!: pw == psychedelicfurs
+
+SecVal{not_that_bad_for_a_zip}
+
+[archive.zip](https://github.com/fahimalshihab/CTF/files/12935384/archive.zip)
+
+
+ 
+
+# 2)The_Picture
 --> zsteg -a challenge.png
 
 SecVal{pH0R3N51C_m3}
