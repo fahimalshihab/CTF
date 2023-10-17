@@ -88,3 +88,7 @@ for x in range(size):
 large = img.resize((10 * size, 10 * size))
 large.show()
 </pre>
+
+![tmp0kb86wil](https://github.com/fahimalshihab/CTF/assets/97816146/87514d75-a5e5-44ed-bae4-ad7ea728da1d)
+
+csawctf{1_d1dnt_kn0w_th1s_w0uld_w0rk}
