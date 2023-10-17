@@ -7,6 +7,8 @@ SecVal{not_that_bad_for_a_zip}
 
 [archive.zip](https://github.com/fahimalshihab/CTF/files/12935384/archive.zip)
 
+https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
+
 
  
 
