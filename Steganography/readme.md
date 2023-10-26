@@ -18,3 +18,4 @@ or
 ```
 stegcracker file.jpg rockyou.txt    
 ```
+example :- stegseek crack_me.jpg rockyou.txt
