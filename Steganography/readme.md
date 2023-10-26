@@ -1,3 +1,8 @@
+# IMP
+ ```
+exiftool file.png | grep flag
+strings file.png | grep flag
+```
 # ZWSP
 
 Zero width (also zero-width) refers to a non-printing character used in computer typesetting of some complex scripts
