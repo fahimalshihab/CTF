@@ -9,3 +9,12 @@ Hi buddy ﻿‌​​​​​‌⁠‌‌​‌‌​‌⁠‌​​​​​�
 --> paste
 
 <a href="https://neatnik.net/steganographr/">Here :)</a>
+
+# cracking
+```
+stegseek file.jpg rockyou.txt
+```
+or
+```
+stegcracker file.jpg rockyou.txt    
+```
