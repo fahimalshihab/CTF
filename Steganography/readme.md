@@ -26,3 +26,8 @@ zsteg -a file.png | grep flag
 
 ```
 example :- zsteg -a ch.png | grep SecVa  
+# zip cracking 
+```
+fcrackzip -v -D -u -p rockyou.txt file.zip
+```
+example:- fcrackzip -v -D -u -p rockyou.txt archive.zip
