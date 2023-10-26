@@ -19,3 +19,10 @@ or
 stegcracker file.jpg rockyou.txt    
 ```
 example :- stegseek crack_me.jpg rockyou.txt
+
+# zsteg 
+```
+zsteg -a file.png | grep flag  
+
+```
+example :- zsteg -a ch.png | grep SecVa  
