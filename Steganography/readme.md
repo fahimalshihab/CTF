@@ -1,7 +1,20 @@
 # IMP
  ```
-exiftool file.png | grep flag
-strings file.png | grep flag
+exiftool <file.xyz>  | grep flag
+
+file <file.xyz>
+
+steghide extract -sf <file.xyz>
+
+binwalk -M --dd=".*" <file.xyz>
+
+strings <file.xyz>
+
+hexedit <file.xyz>
+
+ghex <file.xyz>
+
+unzip <file.docx>
 ```
 # ZWSP
 
