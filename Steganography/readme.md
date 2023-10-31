@@ -1,4 +1,9 @@
 # IMP
+online Tools :
+
+[Aperi'Solve](https://www.aperisolve.com/)
+
+[Steg Online](https://stegonline.georgeom.net/upload)
  ```
 exiftool <file.xyz>  | grep flag
 
