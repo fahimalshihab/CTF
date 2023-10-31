@@ -122,6 +122,6 @@ Archive:  hidden.zip
 ┌──(iftx㉿kali)-[~/Downloads/_alpha.jpg.extracted]
 └─$ eog secret.png
 ```
-now using [stegsolver](https://www.aperisolve.com/114591a2ac4b2a985143c43eefa874d5)
+now using [Aperi'Solver](https://www.aperisolve.com/114591a2ac4b2a985143c43eefa874d5)
 we got 
 ![image](https://github.com/fahimalshihab/CTF/assets/97816146/e209ab41-700c-4d61-af68-2d48a81cf712)
