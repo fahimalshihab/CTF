@@ -23,6 +23,10 @@ ghex <file.xyz>
 
 unzip <file.docx>
 
+zbarimg file.xyz
+
+outguess -k key -r file.xyz out
+
 pdf-parser megamind.pdf | grep flag
 ```
 # ZWSP
