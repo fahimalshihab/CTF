@@ -473,8 +473,20 @@ QR-Code:flag{pandas_zebras_and_orcas}```
 ### Moanin
 Any true jazzer knows that you're always supposed to listen in mono.
 I got this track Any true jazzer knows that you're always supposed to listen in mono.
-I got [this track](moanin.wav) from my dad's old records. It's a bit scratched in some spots. Could you help me convert it to mono, and maybe even remove the scratching?
+I got [this track]([moanin.wav](https://github.com/uclaacm/ctf-after-dark-f22/blob/main/challenges/moanin/moanin.wav)) from my dad's old records. It's a bit scratched in some spots. Could you help me convert it to mono, and maybe even remove the scratching?
 
 (the flag is 1 word, wrap it with flag{})  from my dad's old records. It's a bit scratched in some spots. Could you help me convert it to mono, and maybe even remove the scratching?
 
 (the flag is 1 word, wrap it with flag{})
+![image](https://github.com/fahimalshihab/CTF/assets/97816146/1db3288a-e794-45a9-a824-e605ccf6bdd3)
+Flag : flag{groanin}
+
+
+### Zalgo
+Here's some code that prints the entire script of 
+  Yup, that's the only thing it does!
+
+Hint: A little Reddit OSINT might be helpful :) We love open source code.
+
+Note: Make sure you have Python 3.10 or later installed.
+
