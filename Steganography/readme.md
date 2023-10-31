@@ -6,6 +6,8 @@ file <file.xyz>
 
 steghide extract -sf <file.xyz>
 
+binwalk -e fule.xyz
+
 binwalk -M --dd=".*" <file.xyz>
 
 strings <file.xyz>
