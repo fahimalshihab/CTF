@@ -397,4 +397,43 @@ solve ->
 Had to find it in google map 
 ![imageedit_5_9376069411](https://github.com/fahimalshihab/CTF/assets/97816146/2eb372ae-bb38-421e-a916-31dd0342e003)
 
+Flag : flag{anderson_school_of_management}
+
+# Where is my supersuit
+Where is my ![secretsuit](https://github.com/fahimalshihab/CTF/assets/97816146/8da197f4-5994-4ee6-80e2-d273a56d1753)
+ ? (Hints for submission: Enter as flag{street_address}, all lowercase. Separate word with underscores. Use standard street abbreviations (i.e. blvd, ln, dr).)
+ ```          
+┌──(iftx㉿kali)-[~/Downloads]
+└─$ ls
+secretsuit.png
+                                                                                                     
+┌──(iftx㉿kali)-[~/Downloads]
+└─$ binwalk -e secretsuit.png
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             PNG image, 1080 x 686, 8-bit/color RGB, non-interlaced
+41            0x29            Zlib compressed data, best compression
+844144        0xCE170         Zip archive data, at least v2.0 to extract, compressed size: 21, uncompressed size: 21, name: nums.txt
+844257        0xCE1E1         End of Zip archive, footer length: 22
+
+                                                                                                     
+┌──(iftx㉿kali)-[~/Downloads]
+└─$ ls
+secretsuit.png  _secretsuit.png.extracted
+                                                                                                     
+┌──(iftx㉿kali)-[~/Downloads]
+└─$ cd _secretsuit.png.extracted 
+                                                                                                     
+┌──(iftx㉿kali)-[~/Downloads/_secretsuit.png.extracted]
+└─$ ls
+29  29.zlib  CE170.zip  nums.txt
+                                                                                                     
+┌──(iftx㉿kali)-[~/Downloads/_secretsuit.png.extracted]
+└─$ cat nums.txt                
+37.832015,-122.283661      `
+```
+ ![image](https://github.com/fahimalshihab/CTF/assets/97816146/5bdf69bd-68fa-4d8b-afc0-76414912a99d)
+Flag : flag{1200_park_ave}
+
 
