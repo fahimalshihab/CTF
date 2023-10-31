@@ -125,3 +125,106 @@ Archive:  hidden.zip
 now using [Aperi'Solver](https://www.aperisolve.com/114591a2ac4b2a985143c43eefa874d5)
 we got 
 ![image](https://github.com/fahimalshihab/CTF/assets/97816146/e209ab41-700c-4d61-af68-2d48a81cf712)
+
+### camera roll
+My friend sent me  this ![camera_roll](https://github.com/fahimalshihab/CTF/assets/97816146/1b655c23-042b-4f76-b955-5694c170517a)
+picture he says contains his entire camera roll and told me something about putting out a fire. Can you put the fire out for me?
+```
+just Binwalk
+
+┌──(iftx㉿kali)-[~/Downloads]
+└─$ ls
+camera_roll.jpg
+                                                                                                     
+┌──(iftx㉿kali)-[~/Downloads]
+└─$ binwalk -e camera_roll.jpg             
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             JPEG image data, EXIF standard
+12            0xC             TIFF image data, big-endian, offset of first image directory: 8
+98462         0x1809E         Zip archive data, at least v2.0 to extract, compressed size: 56239, uncompressed size: 56447, name: amoung.jpg
+154741        0x25C75         Zip archive data, at least v2.0 to extract, compressed size: 1450954, uncompressed size: 1451595, name: 4.zip
+1605909       0x188115        End of Zip archive, footer length: 22
+1605931       0x18812B        Zip archive data, at least v2.0 to extract, compressed size: 1478893, uncompressed size: 1490084, name: maz.png
+3084861       0x2F123D        Zip archive data, at least v2.0 to extract, compressed size: 4173923, uncompressed size: 4180475, name: oscar.jpg
+7258823       0x6EC2C7        Zip archive data, at least v2.0 to extract, compressed size: 247955, uncompressed size: 247935, name: 5.zip
+7507080       0x728C88        End of Zip archive, footer length: 22
+7507102       0x728C9E        Zip archive data, at least v2.0 to extract, compressed size: 970918, uncompressed size: 971255, name: fashion.jpg
+8478061       0x815D6D        Zip archive data, at least v2.0 to extract, compressed size: 160689, uncompressed size: 160664, name: pain.jpg
+8638788       0x83D144        Zip archive data, at least v2.0 to extract, compressed size: 87581, uncompressed size: 88276, name: bald.jpg
+8726407       0x852787        Zip archive data, at least v2.0 to extract, compressed size: 131231, uncompressed size: 131862, name: banana.jpg
+8858043       0x8729BB        End of Zip archive, footer length: 22
+
+                                                                                                     
+┌──(iftx㉿kali)-[~/Downloads]
+└─$ cd _camera_roll.jpg.extracted 
+                                                                                                     
+┌──(iftx㉿kali)-[~/Downloads/_camera_roll.jpg.extracted]
+└─$ ls
+1809E.zip   4.zip  728C9E.zip  bald.jpg    fashion.jpg  oscar.jpg
+18812B.zip  5.zip  amoung.jpg  banana.jpg  maz.png      pain.jpg
+                                                                                                     
+┌──(iftx㉿kali)-[~/Downloads/_camera_roll.jpg.extracted]
+└─$ binwalk -e fashion.jpg    
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             JPEG image data, JFIF standard 1.01
+72996         0x11D24         Zip archive data, at least v2.0 to extract, compressed size: 837795, uncompressed size: 864584, name: nik.jpg
+910828        0xDE5EC         Zip archive data, at least v2.0 to extract, compressed size: 60186, uncompressed size: 61043, name: cigar.jpg
+971233        0xED1E1         End of Zip archive, footer length: 22
+
+                                                                                                     
+┌──(iftx㉿kali)-[~/Downloads/_camera_roll.jpg.extracted]
+└─$ cd _fashion.jpg.extracted    
+                                                                                                     
+┌──(iftx㉿kali)-[~/Downloads/_camera_roll.jpg.extracted/_fashion.jpg.extracted]
+└─$ ls
+11D24.zip  cigar.jpg  nik.jpg
+                                                                                                     
+┌──(iftx㉿kali)-[~/Downloads/_camera_roll.jpg.extracted/_fashion.jpg.extracted]
+└─$ binwalk -e nik.jpg    
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+618090        0x96E6A         JPEG image data, EXIF standard
+618102        0x96E76         TIFF image data, big-endian, offset of first image directory: 8
+704488        0xABFE8         JPEG image data, EXIF standard
+704500        0xABFF4         TIFF image data, big-endian, offset of first image directory: 8
+
+                                                                                                     
+┌──(iftx㉿kali)-[~/Downloads/_camera_roll.jpg.extracted/_fashion.jpg.extracted]
+└─$ ls
+11D24.zip  cigar.jpg  nik.jpg
+                                                                                                     
+┌──(iftx㉿kali)-[~/Downloads/_camera_roll.jpg.extracted/_fashion.jpg.extracted]
+└─$ binwalk --dd=".*"  nik.jpg             
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+618090        0x96E6A         JPEG image data, EXIF standard
+618102        0x96E76         TIFF image data, big-endian, offset of first image directory: 8
+704488        0xABFE8         JPEG image data, EXIF standard
+704500        0xABFF4         TIFF image data, big-endian, offset of first image directory: 8
+
+                                                                                                     
+┌──(iftx㉿kali)-[~/Downloads/_camera_roll.jpg.extracted/_fashion.jpg.extracted]
+└─$ ls
+11D24.zip  cigar.jpg  nik.jpg  _nik.jpg.extracted
+                                                                                                     
+┌──(iftx㉿kali)-[~/Downloads/_camera_roll.jpg.extracted/_fashion.jpg.extracted]
+└─$ cd _nik.jpg.extracted    
+                                                                                                     
+┌──(iftx㉿kali)-[~/Downloads/_camera_roll.jpg.extracted/_fashion.jpg.extracted/_nik.jpg.extracted]
+└─$ ls
+96E6A  96E76  ABFE8  ABFF4
+                                                                                                     
+┌──(iftx㉿kali)-[~/Downloads/_camera_roll.jpg.extracted/_fashion.jpg.extracted/_nik.jpg.extracted]
+└─$ eog *           
+
+```
+/home/iftx/Downloads/_camera_roll.jpg.extracted/_fashion.jpg.extracted/_nik.jpg.extracted/
+and found 
+
+![96E6A](https://github.com/fahimalshihab/CTF/assets/97816146/3ccee204-75b0-4075-90bd-0b7549470dae)
