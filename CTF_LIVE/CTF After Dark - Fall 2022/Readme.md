@@ -483,10 +483,32 @@ Flag : flag{groanin}
 
 
 ### Zalgo
-Here's some code that prints the entire script of [shrek](CTF_LIVE/CTF After Dark - Fall 2022/shrek.py)
+Here's some code that prints the entire script of [shrek](shrek.py)
   Yup, that's the only thing it does!
 
 Hint: A little Reddit OSINT might be helpful :) We love open source code.
 
 Note: Make sure you have Python 3.10 or later installed.
+
+Solve -> i searched for zalgo redit and found a pyhtoon code to compress [here](https://github.com/DaCoolOne/DumbIdeas/blob/main/reddit_ph_compressor/compress.py)
+
+then i got this decompress code 
+```
+def unicode_decompress(b):
+    return ''.join([chr(((h<<6&64|c&63)+22)%133+10)for h,c in zip(b[1::2],b[2::2])])
+    
+with open("shrek.py","rb") as f:
+         zalgo = f.read()
+         test_back = unicode_decompress(zalgo)
+         print(test_back)
+
+```
+```
+┌──(iftx㉿kali)-[~/Downloads]
+└─$ python3 decompress.py > output.txt  
+```
+and in this output.txt i found the flag
+
+
+Flag :  flag{accidentally_in_love}
 
