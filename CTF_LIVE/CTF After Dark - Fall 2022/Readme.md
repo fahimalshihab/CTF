@@ -436,4 +436,36 @@ secretsuit.png  _secretsuit.png.extracted
  ![image](https://github.com/fahimalshihab/CTF/assets/97816146/5bdf69bd-68fa-4d8b-afc0-76414912a99d)
 Flag : flag{1200_park_ave}
 
+#
+# Steg
+### Day and night
+"Los Angeles is so different and [beautiful](los_angeles.jpg) at night. The key to taking such beautiful photos is to do it in BLACKANDWHITE, and always point your camera towards the skyline, facing out, I guess.
+![los_angeles](https://github.com/fahimalshihab/CTF/assets/97816146/cd9e6344-0ce8-44e4-a974-4ce501a820a3)
+Solve -> So here we see a key " BLACKANDWHITE  and a hint at last line "facing out, I guess" so we know we have to use outguess
 
+```
+┌──(iftx㉿kali)-[~/Downloads]
+└─$ outguess -k BLACKANDWHITE -r los_angeles.jpg out
+Reading los_angeles.jpg....
+Extracting usable bits:   129121 bits
+Steg retrieve: seed: 4994, len: 1795
+                                                                                                     
+┌──(iftx㉿kali)-[~/Downloads]
+└─$ ls
+los_angeles.jpg  out  secretsuit.png  _secretsuit.png.extracted
+                                                                                                     
+┌──(iftx㉿kali)-[~/Downloads]
+└─$ file out                  
+out: PNG image data, 300 x 300, 8-bit/color RGBA, non-interlaced
+                                                                                                     
+┌──(iftx㉿kali)-[~/Downloads]
+└─$ eog out            
+
+```
+and found
+
+![out](https://github.com/fahimalshihab/CTF/assets/97816146/1a7e1070-8f96-40a2-91fe-ca4421757605)
+
+now ``` ┌──(iftx㉿kali)-[~/Downloads]
+└─$ zbarimg out.png 
+QR-Code:flag{pandas_zebras_and_orcas}```
