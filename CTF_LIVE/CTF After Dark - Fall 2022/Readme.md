@@ -483,7 +483,7 @@ Flag : flag{groanin}
 
 
 ### Zalgo
-Here's some code that prints the entire script of 
+Here's some code that prints the entire script of [shrek](CTF_LIVE/CTF After Dark - Fall 2022/shrek.py)
   Yup, that's the only thing it does!
 
 Hint: A little Reddit OSINT might be helpful :) We love open source code.
