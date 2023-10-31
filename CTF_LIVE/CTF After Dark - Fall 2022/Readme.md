@@ -469,3 +469,9 @@ and found
 now ``` ┌──(iftx㉿kali)-[~/Downloads]
 └─$ zbarimg out.png 
 QR-Code:flag{pandas_zebras_and_orcas}```
+
+### Moanin
+Any true jazzer knows that you're always supposed to listen in mono.
+I got this track  from my dad's old records. It's a bit scratched in some spots. Could you help me convert it to mono, and maybe even remove the scratching?
+
+(the flag is 1 word, wrap it with flag{})
