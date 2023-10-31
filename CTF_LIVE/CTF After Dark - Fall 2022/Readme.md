@@ -512,3 +512,21 @@ and in this output.txt i found the flag
 
 Flag :  flag{accidentally_in_love}
 
+### Diff
+I like listening to my music in mono, but someone broke my converter. Here, listen to [doomsday.wav](https://github.com/uclaacm/ctf-after-dark-f22/blob/main/challenges/diff/doomsday.wav).
+It's supposed to be mono, but the left and right channels are slightly different. Could you help me figure out what the difference is, so I can try to fix it?
+
+(All letters lowercase, separate words by _, and wrap with flag{})
+```
+so using the audacity  i had to find the difference of this two track 
+
+select2 > effect > special > invert ( right track button to left)
+select both >tracks > mix > mix and render > flag.wav
+
+now using  sonic visualiser on flag.wav  found this
+```
+![image](https://github.com/fahimalshihab/CTF/assets/97816146/59ff5476-8e39-409f-a210-8bac4d26a2d4)
+morse code: -... . . .--. -... --- --- .--.
+Text: BEEPBOOP
+
+Flag : flag{beep_boop}
