@@ -15,6 +15,8 @@ hexedit <file.xyz>
 ghex <file.xyz>
 
 unzip <file.docx>
+
+pdf-parser megamind.pdf | grep flag
 ```
 # ZWSP
 
