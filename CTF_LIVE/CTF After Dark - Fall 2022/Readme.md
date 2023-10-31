@@ -228,3 +228,173 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 and found 
 
 ![96E6A](https://github.com/fahimalshihab/CTF/assets/97816146/3ccee204-75b0-4075-90bd-0b7549470dae)
+
+#
+# OSINT
+### when it all began
+Starting off with some detective work... Can you figure out when the domain for ACM Cyber's website was created? 
+Answer will be of the form: flag{YYYY-MM-DD}
+```
+┌──(iftx㉿kali)-[~]
+└─$ whois acmcyber.com
+   Domain Name: ACMCYBER.COM
+   Registry Domain ID: 2438728089_DOMAIN_COM-VRSN
+   Registrar WHOIS Server: whois.registrar.amazon.com
+   Registrar URL: http://registrar.amazon.com
+   Updated Date: 2023-08-26T23:34:58Z
+   Creation Date: 2019-09-29T23:58:03Z
+   Registry Expiry Date: 2024-09-29T23:58:03Z
+   Registrar: Amazon Registrar, Inc.
+   Registrar IANA ID: 468
+   Registrar Abuse Contact Email: abuse@amazonaws.com
+   Registrar Abuse Contact Phone: +1.2067406200
+   Domain Status: ok https://icann.org/epp#ok
+   Name Server: NS-1366.AWSDNS-42.ORG
+   Name Server: NS-1574.AWSDNS-04.CO.UK
+   Name Server: NS-310.AWSDNS-38.COM
+   Name Server: NS-961.AWSDNS-56.NET
+   DNSSEC: unsigned
+   URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of whois database: 2023-10-31T13:49:34Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+NOTICE: The expiration date displayed in this record is the date the
+registrar's sponsorship of the domain name registration in the registry is
+currently set to expire. This date does not necessarily reflect the expiration
+date of the domain name registrant's agreement with the sponsoring
+registrar.  Users may consult the sponsoring registrar's Whois database to
+view the registrar's reported date of expiration for this registration.
+
+TERMS OF USE: You are not authorized to access or query our Whois
+database through the use of electronic processes that are high-volume and
+automated except as reasonably necessary to register domain names or
+modify existing registrations; the Data in VeriSign Global Registry
+Services' ("VeriSign") Whois database is provided by VeriSign for
+information purposes only, and to assist persons in obtaining information
+about or related to a domain name registration record. VeriSign does not
+guarantee its accuracy. By submitting a Whois query, you agree to abide
+by the following terms of use: You agree that you may use this Data only
+for lawful purposes and that under no circumstances will you use this Data
+to: (1) allow, enable, or otherwise support the transmission of mass
+unsolicited, commercial advertising or solicitations via e-mail, telephone,
+or facsimile; or (2) enable high volume, automated, electronic processes
+that apply to VeriSign (or its computer systems). The compilation,
+repackaging, dissemination or other use of this Data is expressly
+prohibited without the prior written consent of VeriSign. You agree not to
+use electronic processes that are automated and high-volume to access or
+query the Whois database except as reasonably necessary to register
+domain names or modify existing registrations. VeriSign reserves the right
+to restrict your access to the Whois database in its sole discretion to ensure
+operational stability.  VeriSign may restrict or terminate your access to the
+Whois database for failure to abide by these terms of use. VeriSign
+reserves the right to modify these terms at any time.
+
+The Registry database contains ONLY .COM, .NET, .EDU domains and
+Registrars.
+Domain Name: acmcyber.com
+Registry Domain ID: 2438728089_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.registrar.amazon.com
+Registrar URL: https://registrar.amazon.com
+Updated Date: 2023-08-26T23:34:58Z
+Creation Date: 2019-09-29T23:58:03Z
+Registrar Registration Expiration Date: 2024-09-29T23:58:03Z
+Registrar: Amazon Registrar, Inc.
+Registrar IANA ID: 468
+Registrar Abuse Contact Email: abuse@amazonaws.com
+Registrar Abuse Contact Phone: +1.2067406200
+Domain Status: ok https://icann.org/epp#ok
+Registry Registrant ID: Not Available From Registry
+Registrant Name: On behalf of acmcyber.com owner
+Registrant Organization: Identity Protection Service
+Registrant Street: PO Box 786
+Registrant City: Hayes
+Registrant State/Province: Middlesex
+Registrant Postal Code: UB3 9TR
+Registrant Country: GB
+Registrant Phone: +44.1483307527
+Registrant Phone Ext:
+Registrant Fax: +44.1483304031
+Registrant Fax Ext:
+Registrant Email: fdf20d40-4f0c-4833-bd84-7356751e882e@identity-protect.org
+Registry Admin ID: Not Available From Registry
+Admin Name: On behalf of acmcyber.com owner
+Admin Organization: Identity Protection Service
+Admin Street: PO Box 786
+Admin City: Hayes
+Admin State/Province: Middlesex
+Admin Postal Code: UB3 9TR
+Admin Country: GB
+Admin Phone: +44.1483307527
+Admin Phone Ext:
+Admin Fax: +44.1483304031
+Admin Fax Ext:
+Admin Email: fdf20d40-4f0c-4833-bd84-7356751e882e@identity-protect.org
+Registry Tech ID: Not Available From Registry
+Tech Name: On behalf of acmcyber.com owner
+Tech Organization: Identity Protection Service
+Tech Street: PO Box 786
+Tech City: Hayes
+Tech State/Province: Middlesex
+Tech Postal Code: UB3 9TR
+Tech Country: GB
+Tech Phone: +44.1483307527
+Tech Phone Ext:
+Tech Fax: +44.1483304031
+Tech Fax Ext:
+Tech Email: fdf20d40-4f0c-4833-bd84-7356751e882e@identity-protect.org
+Name Server: NS-310.AWSDNS-38.COM
+Name Server: NS-961.AWSDNS-56.NET
+Name Server: NS-1366.AWSDNS-42.ORG
+Name Server: NS-1574.AWSDNS-04.CO.UK
+DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2023-10-31T13:49:52Z <<<
+For more information on Whois status codes, please visit https://icann.org/epp
+
+By submitting a query to the Amazon Registrar, Inc. WHOIS database, you
+agree to abide by the following terms. The data in Amazon Registrar, Inc.'s
+WHOIS database is provided by Amazon Registrar, Inc. for the sole purpose of
+assisting you in obtaining information about domain name accuracy. You agree
+to use this data only for lawful purposes and further agree not to use this
+data for any unlawful purpose or to: (1) enable, allow, or otherwise support
+the transmission by email, telephone, or facsimile of commercial advertising
+or unsolicited bulk email, or (2) enable high volume, automated, electronic
+processes to collect or compile this data for any purpose, including mining
+this data for your own personal or commercial purposes. Amazon Registrar, Inc.
+reserves the right to restrict or terminate your access to the data if you fail
+to abide by these terms of use. Amazon Registrar, Inc. reserves the right
+to modify these terms at any time.
+
+Visit Amazon Registrar, Inc. at https://registrar.amazon.com
+
+Contact information available here:
+https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-contact-support.html
+
+© 2020, Amazon.com, Inc., or its affiliates
+```
+Flag : flag{2019-09-29}
+
+### Back in my day
+What was the first IP address uclaacm.com was hosted on? 
+Place your answer within flag{}
+so went to [ViewDns.info](https://viewdns.info/)
+![image](https://github.com/fahimalshihab/CTF/assets/97816146/ae6b20ef-0b63-4ffa-a7d3-4be772a58daf)
+
+Flag : flag{192.64.119.64}
+
+### Bean stalking
+
+Lima Bean is a senior at Rice University. He used to work as a Project Manager for Super Secure Systems, but recently got a job at Brick. What's his current job title?
+so judt had to search in Linkedin
+flag{fr0m_beans_t0_bricks}
+
+### pokemon adventures-1
+ recently have downloaded Pokemon Go and want to explore all the best gyms and PokeStops here at UCLA! However, my friend has been hiding where all of the good spots to catch Pokemon are. Can you help me find them?
+My friend just posted this [photo](pokemon-1.png) of a great spot to study and take classes. The students here... seem a little different than the rest. Can you find which UCLA school is near here? (Hint: The flag is the name of the school all lower case and with underscores used as spaces. The full name is FOUR words. The answer must be wraped in flag{YOUR_ANSWER}.)
+
+solve -> 
+Had to find it in google map 
+![imageedit_5_9376069411](https://github.com/fahimalshihab/CTF/assets/97816146/2eb372ae-bb38-421e-a916-31dd0342e003)
+
+
