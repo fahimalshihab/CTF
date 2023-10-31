@@ -55,3 +55,13 @@ audit.txt  jpg  zip
 ```
 Flag : flag{sm00th_op3rator}
 
+### No Flags?
+This individual known as [megamind.pdf](https://github.com/fahimalshihab/CTF/files/13214942/megamind.pdf)
+ has gotten quite the ego, he's even taunting the very cool people in Cyber!
+Show them that we do, in fact, have the inappropriate word that the popular meme mentions!
+```
+┌──(iftx㉿kali)-[~/Downloads]
+└─$ pdf-parser megamind.pdf | grep flag
+PDF Comment '%%EOFflag{no_compan1onship}\n'
+```
+Flag : flag{no_compan1onship}
