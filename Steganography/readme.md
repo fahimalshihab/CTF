@@ -1,5 +1,5 @@
 # IMP
-[stegsilver](stegsolver.jar) $ java -jar stegsolve.jar 
+[stegsolver](stegsolver.jar) $ java -jar stegsolve.jar 
 online Tools :
 
 [Aperi'Solve](https://www.aperisolve.com/)
