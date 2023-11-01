@@ -95,8 +95,12 @@ Flag : shell{y0u_g07_th3_flag_N1c3!}
 "I was in the seventh heaven painted red green and blue"
 
 Given: ![Seventh_Heaven_Image](https://github.com/fahimalshihab/CTF/assets/97816146/f104de41-d0d9-4f8f-aa4e-d3dc72251c21)
-using stegsolver 
+
+using [stegsolver](stegsolver.jar) $ java -jar stegsolve.jar  
+
 ![image](https://github.com/fahimalshihab/CTF/assets/97816146/e398e3a9-a1fe-4532-8c2d-52770acd602c)
+
+
 Flag : SHELL{man1pul4t1ng_w1th_31ts_15_3A5y}
 
 
