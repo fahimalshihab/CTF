@@ -1,4 +1,6 @@
 # Diffie–Hellman
+![dh-revised](https://github.com/fahimalshihab/CTF/assets/97816146/ac0053da-176c-4763-bc3e-85760ceb70ea)
+
 
 ```
 #Diffie–Hellman
