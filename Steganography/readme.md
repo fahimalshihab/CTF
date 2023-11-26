@@ -29,6 +29,10 @@ zbarimg file.xyz
 outguess -k key -r file.xyz out
 
 pdf-parser megamind.pdf | grep flag
+
+xxd -r ./Dumplex.txt ./flag.jpg
+
+stegsnow -C WhiteSnow.txt
 ```
 # ZWSP
 
@@ -41,7 +45,8 @@ Hi buddy ﻿‌​​​​​‌⁠‌‌​‌‌​‌⁠‌​​​​​�
 --> paste
 
 <a href="https://neatnik.net/steganographr/">Here :)</a>
-
+or 
+<a href="https://www.irongeek.com/i.php?page=security/unicode-steganography-homoglyph-encoder">here</a>
 # cracking
 ```
 stegseek file.jpg rockyou.txt
