@@ -1,3 +1,17 @@
+# hastad attck (3n,3c) 
+```
+from sympy.ntheory.modular import crt
+from gmpy2 import iroot
+
+n = [ 86812553978993,81744303091421,83695120256591 ]
+c = [8875674977048,70744354709710, 29146719498409 ]
+e=3
+  
+resultant, mod = crt(n,c)
+value, is_perfect = iroot(resultant,e)
+if is_perfect:
+   print(value)
+```
 # Wiener ( e is a large one )
 
 We get a setup for a RSA challenge. Since e is fairly huge we can assume d might be small so we can try our luck with Wiener's attack. 
