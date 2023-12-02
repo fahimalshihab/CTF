@@ -34,6 +34,11 @@ xxd -r ./Dumplex.txt ./flag.jpg
 
 stegsnow -C WhiteSnow.txt
 ```
+# Linux cmnd
+To select the specific length 
+```
+└─$ grep -E '^.{8}$' lost_map.log
+```
 # ZWSP
 
 Zero width (also zero-width) refers to a non-printing character used in computer typesetting of some complex scripts
