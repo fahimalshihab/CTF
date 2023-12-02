@@ -47,6 +47,16 @@ Hi buddy ﻿‌​​​​​‌⁠‌‌​‌‌​‌⁠‌​​​​​�
 <a href="https://neatnik.net/steganographr/">Here :)</a>
 or 
 <a href="https://www.irongeek.com/i.php?page=security/unicode-steganography-homoglyph-encoder">here</a>
+# keepass 
+```
+─$ file woof
+woof: Keepass password database 2.x KDBX
+└─$ keepass2john woof.kdbx >> woof.hash
+└─$ john --wordlist=/usr/share/wordlists/rockyou.txt --format=keepass woof.hash
+└─$ john  woof.hash --show 
+```
+thn open with keepass tool
+
 # cracking
 ```
 stegseek file.jpg rockyou.txt
