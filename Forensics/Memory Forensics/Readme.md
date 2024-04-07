@@ -36,3 +36,10 @@ Example ![image](https://github.com/fahimalshihab/CTF/assets/97816146/ba664d2a-5
 ```volatility -f MemoryDump_Lab1.raw --profile=Win7SP1x64 dumpfiles -Q 0x000000003fa3ebc0 -D .```
 ![image](https://github.com/fahimalshihab/CTF/assets/97816146/e13a405e-8828-473f-994b-b383e2a876f8)
 
+```volatility -f MemoryDump_Lab2.raw --profile=Win7SP1x64 clipboard```
+- For copied anything
+
+```volatility -f MemoryDump_Lab2.raw --profile=Win7SP1x64 filescan | grep -i password```
+- search anything thts is a password file
+### Browser History
+``` volatility --plugins=../volatility-plugins/  -f MemoryDump_Lab2.raw --profile=Win7SP1x64 chromehistory```
