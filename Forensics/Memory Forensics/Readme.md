@@ -22,3 +22,17 @@
 
 ```volatility -f Challenge.raw --profile=Win7SP1x86_23418 hashdump```
 - To extract and decrypt cached domain credentials stored in the registry, use the hashdump command
+
+```volatility -f MemoryDump_Lab1.raw --profile=Win7SP1x64 cmdline```
+-  used to display the process command-line arguments.
+## For memory dump
+```volatility -f MemoryDump_Lab1.raw --profile=Win7SP1x64 memdump -p 2424 -D .```
+Example ![image](https://github.com/fahimalshihab/CTF/assets/97816146/ba664d2a-5ee3-4228-92e3-87955de7e701)
+
+### Find specific file
+```volatility -f MemoryDump_Lab1.raw --profile=Win7SP1x64 filescan | grep -i important.rar```
+![image](https://github.com/fahimalshihab/CTF/assets/97816146/5ded368c-35d0-4e5e-99c0-42236b575787)
+### dump file from a adress
+```volatility -f MemoryDump_Lab1.raw --profile=Win7SP1x64 dumpfiles -Q 0x000000003fa3ebc0 -D .```
+![image](https://github.com/fahimalshihab/CTF/assets/97816146/e13a405e-8828-473f-994b-b383e2a876f8)
+
