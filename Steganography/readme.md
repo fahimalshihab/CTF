@@ -10,6 +10,8 @@ exiftool <file.xyz>  | grep flag
 
 file <file.xyz>
 
+unrar e file.rar
+
 steghide extract -sf <file.xyz>
 
 binwalk -e fule.xyz
