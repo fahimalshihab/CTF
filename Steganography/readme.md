@@ -14,6 +14,8 @@ unrar e file.rar
 
 steghide extract -sf <file.xyz>
 
+foremost file.xyz
+
 binwalk -e fule.xyz
 
 binwalk -M --dd=".*" <file.xyz>
