@@ -25,6 +25,10 @@
 
 ```volatility -f MemoryDump_Lab1.raw --profile=Win7SP1x64 cmdline```
 -  used to display the process command-line arguments.
+
+```volatility -f OtterCTF.vmem --profile=Win7SP1x64 lsadump```
+- lsadump for default password
+  
 ## For memory dump
 ```volatility -f MemoryDump_Lab1.raw --profile=Win7SP1x64 memdump -p 2424 -D .```
 Example ![image](https://github.com/fahimalshihab/CTF/assets/97816146/ba664d2a-5ee3-4228-92e3-87955de7e701)
