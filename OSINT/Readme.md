@@ -6,3 +6,19 @@
 ``` python3 sherloc username```
 ## Domain
 use ``` whois example.com``` 
+
+## Search Engine
+[Duckduckgo](https://duckduckgo.com/)
+
+[Bing](https://www.bing.com/)
+
+[Google Advance Search](https://www.google.com/advanced_search)
+
+## Dorcking 
+``` "words" site:example.com```
+
+``` words AND Words site:example.com```
+
+``` words AND Words site:example.com words filetype:pdf```
+
+
