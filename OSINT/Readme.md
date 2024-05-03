@@ -4,3 +4,5 @@
 
 ## USing Sherlock
 ``` python3 sherloc username```
+## Domain
+use ``` whois example.com``` 
