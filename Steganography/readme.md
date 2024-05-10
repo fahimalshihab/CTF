@@ -1,6 +1,7 @@
 # IMP
 [stegsolver](stegsolver.jar) $ java -jar stegsolve.jar 
 online Tools :
+[Forensicallt](https://29a.ch/photo-forensics/#forensic-magnifier)
 
 [Aperi'Solve](https://www.aperisolve.com/)
 
