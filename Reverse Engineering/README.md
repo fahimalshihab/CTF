@@ -20,3 +20,12 @@
 ## Ghidra
 - window -> Defined Strings
 
+## gdb-pwndbg
+
+```info functions ```
+
+```disassemble main ```
+
+```b *adress```
+
+```jump * adress```
