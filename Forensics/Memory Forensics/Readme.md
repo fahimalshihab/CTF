@@ -3,47 +3,72 @@
 
 
 **Informations :** 
-```volatility -f OtterCTF.vmem imageinfo```  
+```
+volatility -f OtterCTF.vmem imageinfo
+```  
 
 
 **Process List :** 
-```volatility -f OtterCTF.vmem --profile=Win7SP1x64 pslist```
+```
+volatility -f OtterCTF.vmem --profile=Win7SP1x64 pslist
+```
 
 
 **Registry :** 
-```volatility -f OtterCTF.vmem --profile=Win7SP1x64 hivelist```
+```
+volatility -f OtterCTF.vmem --profile=Win7SP1x64 hivelist
+```
 
 
 **Extract Password :** 
-```volatility -f OtterCTF.vmem --profile=Win7SP1x64 hashdump -y 0x00000000211eb010```
+```
+volatility -f OtterCTF.vmem --profile=Win7SP1x64 hashdump -y 0x00000000211eb010
+```
 
 
 **Secrets :** 
-```volatility -f OtterCTF.vmem --profile=Win7SP1x64 lsadump```
+```
+volatility -f OtterCTF.vmem --profile=Win7SP1x64 lsadump
+```
 
 
 **Computer Name :** 
-```volatility -f OtterCTF.vmem --profile=Win7SP1x64 printkey -o 0xfffff8a000024010 -K "ControlSet001\Control\ComputerName\ComputerName"```   
+```
+volatility -f OtterCTF.vmem --profile=Win7SP1x64 printkey -o 0xfffff8a000024010 -K "ControlSet001\Control\ComputerName\ComputerName"
+```   
 - get the offset of the registry. using hivelist 
 
 
 **Network Connectiom :** 
-```volatility -f OtterCTF.vmem --profile=Win7SP1x64 netscan```
+```
+volatility -f OtterCTF.vmem --profile=Win7SP1x64 netscan
+```
 - get Ip Add
 
 
 **Processes :**
-```volatility -f OtterCTF.vmem --profile=Win7SP1x64 pstree```
+```
+volatility -f OtterCTF.vmem --profile=Win7SP1x64 pstree
+```
 
 
-**Grep :** ```strings OtterCTF.vmem| grep Lunar-3  -A 2 -B 3```
+**Grep :** 
+```
+strings OtterCTF.vmem| grep Lunar-3  -A 2 -B 3
+```
 - The -A parameter will print content of number of lines that is trailing the searched item and -B parameter will print content of number of lines that is leading searched item. 
 
 
-**ClipBoard :** ```volatility -f OtterCTF.vmem --profile=Win7SP1x64 clipboard```
+**ClipBoard :** 
+```
+volatility -f OtterCTF.vmem --profile=Win7SP1x64 clipboard
+```
 - copy Paste
 
-**Malware :** ```volatility -f OtterCTF.vmem --profile=Win7SP1x64 malfind```
+**Malware :**
+```
+volatility -f OtterCTF.vmem --profile=Win7SP1x64 malfind
+```
 
 
 
