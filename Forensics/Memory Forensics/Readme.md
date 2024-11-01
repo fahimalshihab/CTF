@@ -1,5 +1,48 @@
 ## volatility
 
+
+
+**Informations :** ```volatility -f OtterCTF.vmem imageinfo```  
+
+**Process List :** ```volatility -f OtterCTF.vmem --profile=Win7SP1x64 pslist```
+
+**Registry :** ```volatility -f OtterCTF.vmem --profile=Win7SP1x64 hivelist```
+
+**Extract Password :** ```volatility -f OtterCTF.vmem --profile=Win7SP1x64 hashdump -y 0x00000000211eb010```
+
+**Secrets :** ```volatility -f OtterCTF.vmem --profile=Win7SP1x64 lsadump```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ...............................................................................................................
 [Plugins](https://github.com/volatilityfoundation/volatility/wiki/Command-Reference)
 
 ``` volatility -f Challenge.raw imageinfo ```  
