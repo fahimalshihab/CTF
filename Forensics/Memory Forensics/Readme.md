@@ -2,15 +2,20 @@
 
 
 
-**Informations :** ```volatility -f OtterCTF.vmem imageinfo```  
+**Informations :** 
+```volatility -f OtterCTF.vmem imageinfo```  
 
-**Process List :** ```volatility -f OtterCTF.vmem --profile=Win7SP1x64 pslist```
+**Process List :** 
+```volatility -f OtterCTF.vmem --profile=Win7SP1x64 pslist```
 
-**Registry :** ```volatility -f OtterCTF.vmem --profile=Win7SP1x64 hivelist```
+**Registry :** 
+```volatility -f OtterCTF.vmem --profile=Win7SP1x64 hivelist```
 
-**Extract Password :** ```volatility -f OtterCTF.vmem --profile=Win7SP1x64 hashdump -y 0x00000000211eb010```
+**Extract Password :** 
+```volatility -f OtterCTF.vmem --profile=Win7SP1x64 hashdump -y 0x00000000211eb010```
 
-**Secrets :** ```volatility -f OtterCTF.vmem --profile=Win7SP1x64 lsadump```
+**Secrets :** 
+```volatility -f OtterCTF.vmem --profile=Win7SP1x64 lsadump```
 
 
 
