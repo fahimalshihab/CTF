@@ -70,9 +70,26 @@ volatility -f OtterCTF.vmem --profile=Win7SP1x64 clipboard
 volatility -f OtterCTF.vmem --profile=Win7SP1x64 malfind
 ```
 
+**Command Line :**
+```
+volatility -f MemoryDump_Lab6.raw --profile=Win7SP1x64 cmdline
+```
 
+**File Scan :**
+```
+volatility -f MemoryDump_Lab6.raw --profile=Win7SP1x64 filescan | grep -i flag
+```
 
+**Dump Files :**
+```
+volatility -f MemoryDump_Lab6.raw --profile=Win7SP1x64 dumpfiles -Q 0x000000005fcfc4b0 -D .
 
+```
+
+**Chromehistory :**
+```
+volatility -f MemoryDump_Lab6.raw --profile=Win7SP1x64 chromehistory
+```
 
 
 
